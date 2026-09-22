@@ -1,6 +1,6 @@
-# Clientflow Crm
+# Shopforge
 
-A serious CRM for small sales teams: pipeline, accounts, follow-ups, activities and revenue visibility.
+A commerce operations system covering storefront concerns plus inventory, order workflows, customers and operational analytics.
 
 Built by **Pranaya Simkhada** as a portfolio project to demonstrate product thinking, TypeScript/React/Next.js, API design, PostgreSQL data modeling, responsive UI, validation, and production-minded workflows.
 

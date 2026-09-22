@@ -1,19 +1,12 @@
 # Product notes
 
-ClientFlow is intentionally modeled like internal software a small agency could use.
+ShopForge is intentionally an operations-first commerce product rather than a simple storefront.
 
-Core domain:
-- Organization
-- User / role
-- Company
-- Contact
-- Lead
-- Deal
-- Task
-- Activity
+Important domain rules:
+- inventory changes are transactional
+- an order has an immutable set of order items and prices
+- payment confirmation comes from a verified provider webhook
+- returns create inventory events rather than silently changing stock
+- admin actions should be auditable
 
-Important engineering decisions:
-- Pipeline values are stored as money in the database, not formatted strings.
-- Deal stage changes create immutable activity events.
-- List screens should use server-side pagination once data grows.
-- Permissions should be enforced in the API, not only hidden in the UI.
+Suggested production integrations: Stripe/Razorpay sandbox, object storage for product media, email receipts, background jobs, and Redis for cache/rate limiting.
